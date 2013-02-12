@@ -1,0 +1,12 @@
+{
+  "name": "planphilly-delinquency-server",
+  "version": "0.0.1",
+  "dependencies": {
+    "mongoose": "3.5.5",
+    "now":  "0.8.1"
+  },
+  "engines": {
+     "node": "0.8.x",
+     "npm": "1.1.x"
+   }
+}
