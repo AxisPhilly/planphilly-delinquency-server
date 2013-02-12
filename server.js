@@ -19,7 +19,7 @@ var httpServer = http.createServer(function(req, res) {
   res.end();
 });
 
-httpServer.listen(proces.env.PORT || 3000);
+httpServer.listen(process.env.PORT || 3000);
 
 var nowjs = require('now'),
     everyone = nowjs.initialize(httpServer),
