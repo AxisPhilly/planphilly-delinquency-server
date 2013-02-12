@@ -22,7 +22,12 @@ var httpServer = http.createServer(function(req, res) {
 httpServer.listen(process.env.PORT || 3000);
 
 var nowjs = require('now'),
-    everyone = nowjs.initialize(httpServer),
+    everyone = nowjs.initialize(httpServer, {
+      socketio: {
+        transports: ['xhr-polling', 'jsonp-polling'],
+        "polling duration": 10
+      }
+    }),
     models = require('./models'),
     Property = models.Property;
 
