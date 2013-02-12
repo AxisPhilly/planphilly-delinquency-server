@@ -10,8 +10,6 @@ var httpServer = http.createServer(function(req, res) {
 
   var urlParts = url.parse(req.url);
 
-  console.log(process.env.PPDELINQ_LOAD_KEY);
-
   if (urlParts.pathname === '/' + process.env.PPDELINQ_LOAD_KEY) {
     loadData();
   }
@@ -35,12 +33,10 @@ var loaded = 0;
 
 // bulk load properties
 function loadData() {
-  console.log('foo');
   if (!loaded) {
-    console.log('bar');
-    var props1 = require('/data/props-load1.json');
-    var props2 = require('/data/props-load2.json');
-    var props3 = require('/data/props-load3.json');
+    var props1 = require('props-load1.json');
+    var props2 = require('props-load2.json');
+    var props3 = require('props-load3.json');
 
     Property.collection.insert(props1, {}, function(err){
       console.log(err);
