@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-    mongoose.connect('mongodb://localhost/planphilly-delinquency-2');
+    mongoose.connect(process.env.PPDELINQ_MONGO_URL);
     Schema = mongoose.Schema,
     ObjectId = Schema.ObjectId;
 
