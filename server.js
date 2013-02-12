@@ -34,9 +34,9 @@ var loaded = 0;
 // bulk load properties
 function loadData() {
   if (!loaded) {
-    var props1 = require('props-load1.json');
-    var props2 = require('props-load2.json');
-    var props3 = require('props-load3.json');
+    var props1 = require('./props-load1.json');
+    var props2 = require('./props-load2.json');
+    var props3 = require('./props-load3.json');
 
     Property.collection.insert(props1, {}, function(err){
       console.log(err);
